@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="renderer" content="webkit">-->
-		<title></title>
+		<title>中航长江建设工程有限公司</title>
 		<link href="css/lanrenzhijia.css" type="text/css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="./common/common.css"/>
 		<link rel="stylesheet" type="text/css" href="./common/dom_alipay.css"/>
@@ -72,9 +72,9 @@
 			          <div class="wrapper">
 			          	<div class="video-txt clear">
 			          		<div class="video-txt-left float-lef video-txt-hidden">
-			          			<p>中国装饰百强企业</p>
-			          			<p class="margin-top-15 padding-left-30">中国幕墙50强企业</p>
-			          			<p class="margin-top-15 padding-left-60">改革开放三十年幕墙行业功勋企业</p>
+			          			<div>中国装饰百强企业</div>
+			          			<div class="float-lef">改革开放三十年幕墙行业功勋企业</div>
+			          			<div class="float-lef">中国幕墙50强企业</div>
 			          		</div>
 			          		<div class="video-txt-rt float-rt video-txt-hidden">
 			          			<p>中行长江成立34年</p>
@@ -115,8 +115,8 @@
 			        </li>
 			        <li class="bn-bg02">
 			          <div class="wrapper">
-			          	<div class="qualification-container">
-				            <!--<img src="img/logo_bg.jpeg" alt="" style="height: 100%;"/>-->
+			          	<!--<div class="qualification-container">
+				            <img src="img/logo_bg.jpeg" alt="" style="height: 100%;"/>
 				            <div class="logo-wrapper logo">
 			              		<img src="img/logo.png" alt="" style="width: 100%;"/>
 				            </div>
@@ -129,7 +129,15 @@
 				              	<div class="margin-top-15">机电设备安装工程专业承包壹级资质</div>
 				              	<div class="margin-top-15">建筑智能化专业承包壹级资质</div>
 				            </div>
+			          	</div>-->
+			          	<div class="cover-hand-move">
 			          	</div>
+					    <div class="container-hand-move-s" style="display: none;">
+					        <img src="./img/bg.png" alt="" class="bg-mask">
+					        <div class="hold-hand-s">
+					            <img src="./img/hand.png" alt="" class="hand">
+					        </div>
+					    </div>
 						<div class="wrapper-foot">
 							<div class="wrapper-foot-info clear">
 								<div class="wrapper-foot-item float-lef">
@@ -158,14 +166,7 @@
 			        </li>
 			        <li class="bn-bg03">
 			          <div class="wrapper">
-				          	<div class="cover-hand-move">
-				          	</div>
-						    <div class="container-hand-move-s" style="display: none;">
-						        <img src="./img/bg.png" alt="" class="bg-mask">
-						        <div class="hold-hand-s">
-						            <img src="./img/hand.png" alt="" class="hand">
-						        </div>
-						    </div>
+
 			          </div>
 			        </li>
 			        <li class="bn-bg04">
@@ -289,7 +290,7 @@
 		                        slider.busy=false;
 		                    });
 		                }
-		                if(index == 2) {
+		                if(index == 1) {
 		                	$('.cover-hand-move').css('display','none');
 		                	$('.container-hand-move-s').css('display','block');
 		                	$('.container-hand-move-s').addClass('container-hand-move');
@@ -357,16 +358,16 @@
 			myVideo.oncanplay = function() {
 				setTimeout(() => {
 					$('.video-txt-left').addClass('video-txt-show');
-				},3000);
-				setTimeout(() => {
-					$('.video-txt-left').removeClass('video-txt-show');
-				},5000)
-				setTimeout(() => {
-					$('.video-txt-rt').addClass('video-txt-show')
-				},7000);
-				setTimeout(() => {
-					$('.video-txt-rt').removeClass('video-txt-show')
-				},11000);
+				},1000);
+//				setTimeout(() => {
+//					$('.video-txt-left').removeClass('video-txt-show');
+//				},5000)
+//				setTimeout(() => {
+//					$('.video-txt-rt').addClass('video-txt-show')
+//				},7000);
+//				setTimeout(() => {
+//					$('.video-txt-rt').removeClass('video-txt-show')
+//				},11000);
 				$(document).keydown(function(event){
 					if(event.keyCode == 38){
 						$('.arrow-top').click()

@@ -62,18 +62,18 @@
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
-@-webkit-keyframes xAxis {
+/*@-webkit-keyframes xAxis {
   100% {
     top: 8%;
-    left: 53vh;
+    left: 50vh;
     -webkit-transform: rotate(35deg);
             transform: rotate(35deg);
   }
-}
+}*/
 @keyframes xAxis {
   100% {
     top: 8%;
-    left: 53vh;
+    left: 50vh;
     -webkit-transform: rotate(35deg);
             transform: rotate(35deg);
   }

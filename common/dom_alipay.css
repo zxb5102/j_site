@@ -136,17 +136,29 @@
 	top: 128px;
 	left: calc(50% - 600px);
 	width: 1200px;
-	font-size: 26px;
+	font-size: 30px;
 	font-weight: 700;
-	color: #016DAD;
+	color: #fff;
 	z-index: 2600;
 }
+.video-txt-left {
+	width: 1200px;
+	display: flex;
+	justify-content: space-around;
+}
+.video-txt-left div {
+	width: 25%;
+	text-shadow: 0px 0 8px #000;
+}
+.video-txt-left div:nth-child(2) {
+	width: 50%;
+}
 .video-txt-hidden {
-	transition: all .7s;
+	transition: all 3s;
 	opacity: 0;
 }
 .video-txt-show {
-	transition: all .7s;
+	transition: all 10s;
 	opacity: 1;
 }
 
@@ -187,10 +199,15 @@
 	width: 400px;
 }
 .cover-hand-move {
-	background-image: url(./img/glass.png);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+  background-image: url(../img/glass.png);
+  height: calc(100vh - 85px);    
+  top: 85px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
 }
 
 
