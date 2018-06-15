@@ -1,0 +1,57 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td {margin:0;padding:0;}
+body, button, input, select, textarea {font: 12px/1.5 "Microsoft YaHei",tahoma,arial,Hiragino Sans GB,\5b8b\4f53;}
+h1, h2, h3, h4, h5, h6 {font-size:100%;}
+address, cite, dfn, em, var {font-style:normal;}
+code, kbd, pre, samp {font-family:courier new, courier, monospace;}
+small {font-size:12px;}
+ul, ol {list-style:none;}
+a {text-decoration:none;outline:none;}
+a:hover {color: #00bbee!important;}
+sup {vertical-align:text-top;}
+sub {vertical-align:text-bottom;}
+legend {color:#000;}
+fieldset, img {border:0;}
+button, input, select, textarea {font-size:100%;}
+table {border-collapse:collapse;border-spacing:0;}
+
+.margin-top-15 {
+	margin-top: 15px;
+}
+.margin-left-15 {
+	margin-left: 15px;
+}
+.margin-right-15 {
+	margin-right: 15px;
+}
+.margin-left-5 {
+	margin-left: 5px;
+}
+.margin-right-5 {
+	margin-right: 5px;
+}
+
+.padding-left-15 {
+	padding-left: 15px;
+}
+.padding-left-30 {
+	padding-left: 30px;
+}
+.padding-left-60 {
+	padding-left: 60px;
+}
+
+.float-lef {
+	float: left;
+}
+.float-rt {
+	float: right;
+}
+.clear:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.content {
+	width: 1200px;
+	margin: 0 auto;
+}
