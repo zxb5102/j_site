@@ -4,13 +4,24 @@
 		<meta charset="UTF-8">
 		<title>test</title>
 		<style>
+			body {
+				padding: 0;
+				margin: 0;
+			}
 			.slider-wrap {
 				position: relative;
 				height: 100vh;
 				overflow: hidden;
 			}
+			.banner-list {
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all 0.7s;
+			}
 			.banner{
 				height: 100vh;
+				width: 100vw;
 			}
 			.banner:nth-child(1){
 				background: red;
@@ -42,16 +53,18 @@
 	</head>
 	<body>
 		<div class="slider-wrap">
-			
-			<div class="banner">
-				
+			<div class="banner-list">
+				<div class="banner">
+					
+				</div>
+				<div class="banner">
+					
+				</div>
+				<div class="banner">
+					
+				</div>
 			</div>
-			<div class="banner">
-				
-			</div>
-			<div class="banner">
-				
-			</div>
+
 			
 			<div class="focus-list">
 				<div class="focus-arrow">上</div>
@@ -65,20 +78,23 @@
 		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 		<script type="text/javascript">
 			$(function() {
+				let height = $(".banner").innerHeight();
 				let index = 0;
 				$(".focus-list").on("click",".focus-btn",function(event) {
 					$(".focus-btn").removeClass('focus-btn-active');
-					
 					let target = $(event.target);
 					index = $(".focus-btn").index(this);
 					target.addClass('focus-btn-active');
+					slider();
 				});
 				$(".focus-list").on("click",".focus-arrow",function(event) {
 					let arrow_type = $(".focus-arrow").index(this);
 					if(!arrow_type) {
 						up_slider();
+						slider();
 					}else{
 						up_down();
+						slider();
 					}
 				
 				});
@@ -98,8 +114,10 @@
 						$(list[0]).removeClass('focus-btn-active')
 					}
 				};
-				
-				
+				function slider() {
+					let height = $(".banner").innerHeight();
+					$(".banner-list").css("top",-(height*index))
+				}
 			})
 		</script>
 	</body>

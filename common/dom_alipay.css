@@ -130,6 +130,13 @@
 .wrapper-foot-item:active {
 	opacity: 1;
 }
+.video-wrapper {
+	width: 100%;
+	height:calc(100vh - 28px);
+	position: relative;
+	margin:auto;
+	overflow: hidden;
+}
 .video-txt {
 	transition: all .7s;
 	position: absolute;
@@ -154,11 +161,14 @@
 	width: 50%;
 }
 .video-txt-hidden {
-	transition: all 3s;
 	opacity: 0;
 }
 .video-txt-show {
 	transition: all 10s;
+	opacity: 1;
+}
+.video-foot-show {
+	transition: all .7s;
 	opacity: 1;
 }
 
@@ -208,6 +218,50 @@
   position: relative;
   overflow: hidden;
   text-align: left;
+}
+
+
+
+.slider-wrap {
+	position: relative;
+	height: calc(100vh - 28px);
+	overflow: hidden;
+}
+.banner-list {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.7s;
+}
+.banner{
+	height: calc(100vh - 28px);
+	width: 100vw;
+}
+.banner:nth-child(1){
+	background: red;
+}
+.banner:nth-child(2){
+	background: green;
+}
+.banner:nth-child(3){
+	background: blue;
+}
+.focus-list {
+	position: absolute;
+	top: 200px;
+	right: 50px;
+}
+.focus-btn {
+	width: 18px;
+	height: 18px;
+	background: #fff;
+	border-radius: 100%;
+	margin-bottom: 10px;
+	text-align: center;
+	line-height: 18px;
+}
+.focus-btn-active {
+	background: #00BBEE;				
 }
 
 
