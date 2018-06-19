@@ -11,6 +11,7 @@
 	height: 28px;
 	line-height: 28px;
 }
+
 .arrow-down-s {
 	cursor: pointer;
 	transition: all .3s;
@@ -57,21 +58,25 @@
 	padding: calc((100vh - 240px - 93px)/2) 0;
 	background: rgba(0,0,0,0.3);
 }
-
+/*二级导航条*/
 .nav {
-	    background-color: rgba(255,255,255,.9);
-	    position: absolute;
-	    top: 28px;
-	    left: 0;
-	    width: 100%;
-	    z-index: 2600;
+	transition: all 0.7s;
+    background: rgba(255,255,255,.9);
+    position: absolute;
+    top: 28px;
+    left: 0;
+    width: 100%;
+    z-index: 2600;
+}
+.nav-active {
+	transition: all 0.7s;
+	background: rgba(124,132,144,0.8);
+	border-bottom: 1px solid #efefef;
 }
 .nav-lef {
 	position: relative;
 	height: 85px;
 	width: 45px;
-	/*background: url(../img/logo.png) no-repeat center center;*/
-	/*line-height: 85px;*/
 }
 .nav-rt li {
 	height: 80px;
@@ -82,9 +87,16 @@
 	padding-right: 0;
 }
 .nav-rt a {
+	transition: all 0.7s;
 	color: #333;
     font-size: 16px;
 }
+.nav-active a {
+	transition: all 0.7s;
+	color: #fff!important;
+	text-shadow: 0px 0 8px #000;
+}
+/*轮播图*/
 .wrapper {
 	height: 100%;
 	text-align: center;
@@ -94,16 +106,8 @@
 .banner-list .banner:nth-child(2) .wrapper{
 	background: url(../img/glass.png);
 }
-.thirdly-page-bg {
-	background-image: url(../img/bg03.jpg);
-	background-size: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-.thirdly-page-bg-s {
-	transition: all ease 3s;
-	background-size: 106%;
-}
+
+/*底部导航条*/
 .wrapper-foot {
 	position: absolute;
 	bottom: 0;
@@ -144,6 +148,7 @@
 .wrapper-foot-item:active {
 	opacity: 1!important;
 }
+/*页面一*/
 .video-wrapper {
 	width: 100%;
 	height:calc(100vh - 28px);
@@ -182,7 +187,6 @@
 	opacity: 1;
 }
 
-
 .video-txt p {
 	text-align: left;
 }
@@ -194,7 +198,7 @@
 	height: 100px;
 	z-index: 26000;
 }
-
+/*页面二*/
 .cover-hand-move {
   background-image: url(../img/glass.png);
   height: calc(100% - 85px);    
@@ -207,7 +211,6 @@
   text-align: left;
 }
 
-
 .slider-wrap {
 	position: relative;
 	height: calc(100vh - 28px);
@@ -215,7 +218,7 @@
 }
 .banner-list {
 	position: absolute;
-	top: 0;
+	/*top: 0;*/
 	left: 0;
 	transition: all 0.5s ease;
 }
@@ -227,11 +230,15 @@
 	background: red;
 }
 .banner:nth-child(2){
-	background: green;
+	background-image: url(../img/glass.png);
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .banner:nth-child(3){
 	background: blue;
 }
+/*轮播图按钮*/
 .focus-list {
 	position: absolute;
 	top: calc(50% - 72px);
@@ -260,16 +267,20 @@
 	background: #00BBEE;
 	border: 1px solid #00BBEE;				
 }
-.photo-list-wrapper {
-	position: relative;
-	width: 1200px;
-	height: 100%;
-	margin: 0 auto;
+/*页面三*/
+.thirdly-page-bg {
+	transform: scale(1);
+	transition: all 1s;
+	width: 100%;
+}
+.thirdly-page-bg-s {
+	transform: scale(1.05);
 }
 .photo-list {
 	position: absolute;
 	top: calc(50% - 109px);
-	left: 0;
+	left: calc(50% - 600px);
+	z-index: 2000;
 }
 .photo-item {
     position: relative;
