@@ -69,15 +69,20 @@ $(function() {
 			setTimeout(()=>{
 				$(".thirdly-page-bg").addClass('thirdly-page-bg-s');
 			},500)
+		}if(index == 3) {
+			setTimeout(()=>{
+				$(".fourthly-page .outline-s").addClass('outline');
+				$(".fourthly-page .outline-s").css("display","block")
+			},500)
 		}
 	}
 	//视频播放事件
 	let myVideo = document.getElementById('video');
-	myVideo.oncanplay = function() {
+	myVideo.addEventListener("canplay",function() {
 		setTimeout(() => {
 			$('.video-txt-left').addClass('video-txt-show');
 		},1000);
-		$(document).keydown(function(event){
+		$(document).keyup(function(event){
 			if(event.keyCode == 38){
 				up_slider();
 				slider();
@@ -87,5 +92,38 @@ $(function() {
 				slider();
 			}
 		});
-	}
+	})
+});
+
+//页面五
+$(function () {
+    if ($(".map-branch")) {
+        //默认显示上海
+        // $(".map-dot.shanghai").addClass("cur");
+        // $("#company_shanghai").show().css({
+        //     "left": $(".map-dot.shanghai").position().left + 36,
+        //     "top": $(".map-dot.shanghai").position().top - $("#company_shanghai").height() / 2 + 8
+        // });
+        $(".map-dot").on("mouseover", function () {
+            $(this).addClass("cur").siblings(".map-dot").removeClass("cur");
+        });
+        $(".map-dot").on("click", function () {
+            $(this).addClass("cur").siblings(".map-dot").removeClass("cur");
+            var dataid = $(this).attr("data-id")
+                , comp = $("#company_" + dataid)
+                , otherComp = $("#company_" + dataid).siblings(".branch-map-data");
+//          console.log($(this).position());
+            comp.fadeIn("fast").css({
+                "left": $(this).position().left + 36,
+                "top": $(this).position().top - comp.height() / 2 + 8
+                // "left": $(this).position().left - 160,
+                // "top": $(this).position().top - comp.height() / 2 - 120
+            });
+            otherComp.hide();
+        });
+        $(".branch-map-data").on("mouseleave", function () {
+            $(this).hide();
+            $(".map-dot").removeClass("cur");
+        });
+    }
 });

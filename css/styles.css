@@ -78,3 +78,357 @@
             transform: rotate(35deg);
   }
 }
+
+/*界面四*/
+/** {
+  padding: 0px;
+  margin: 0px;
+}*/
+.arc-container {
+  position: relative;
+  height: 100%;
+  background-image: url(../img/arc-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.arc-container .arc-info {
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  letter-spacing: 10px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #826406;
+}
+.arc-container .arc-info .text-con {
+  text-decoration: overline;
+}
+.arc-container .arc-left {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 80%;
+}
+.arc-container .outline-black {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  height: 52%;
+  z-index: 2;
+}
+.arc-container .outline {
+  position: absolute;
+  bottom: 100%;
+  right: 100%;
+  height: 80%;
+  -webkit-animation: outline-move 4s ease both;
+          animation: outline-move 4s ease both;
+}
+@-webkit-keyframes outline-move {
+  100% {
+    right: 0%;
+    bottom: 0%;
+  }
+}
+@keyframes outline-move {
+  100% {
+    right: 0%;
+    bottom: 0%;
+  }
+}
+/*界面五*/
+.branch-map-l {
+  width: 118.12vh;
+  text-align: left;
+  height: 80vh;
+  position: relative;
+  /* margin:auto; */
+  left: 5%;
+}
+.map-content-box {
+  width: 100%;
+  height: 100%;
+  background: url(../img/map.png)  no-repeat center;
+  background-size: 100% 100%;
+  position: relative;
+  /* transform: scale(1.5); */
+}
+.map-dot {
+  position: absolute;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+.beijing {
+  left: 68.90459364%;
+  top: 38.26086957%;
+}
+.tianjin {
+  left: 71.14252061%;
+  top: 40.69565217%;
+}
+.hainan {
+  /* left:200px;
+    top:200px; */
+  left: 61.60188457%;
+  top: 93.04347826%;
+}
+.hebei {
+  left: 575px;
+  top: 254px;
+}
+.shanxi {
+  left: 540px;
+  top: 276px;
+}
+.liaoning {
+  left: 77.7385159%;
+  top: 34.08695652%;
+}
+.xinjiang {
+  left: 27.44405183%;
+  top: 28.34782609%;
+}
+.jilin {
+  left: 696px;
+  top: 167px;
+}
+.heilongjiang {
+  left: 79.62308598%;
+  top: 18.43478261%;
+}
+.shanghai {
+  left: 78.68080094%;
+  top: 60.86956522%;
+}
+.jiangsu {
+  left: 76.08951708%;
+  top: 54.95652174%;
+}
+.zhejiang {
+  left: 77.14958775%;
+  top: 65.91304348%;
+}
+.anhui {
+  left: 71.26030624%;
+  top: 58.08695652%;
+}
+.fujian {
+  left: 73.61601885%;
+  top: 74.43478261%;
+}
+.jiangxi {
+  left: 70.08244994%;
+  top: 69.91304348%;
+}
+.shandong {
+  left: 71.84923439%;
+  top: 49.39130435%;
+}
+.henan {
+  left: 562px;
+  top: 316px;
+}
+.hubei {
+  left: 65.37102473%;
+  top: 62.43478261%;
+}
+.hunan {
+  left: 545px;
+  top: 409px;
+}
+.guangdong {
+  left: 67.72673734%;
+  top: 81.04347826%;
+}
+.guangxi {
+  left: 506px;
+  top: 461px;
+}
+.chongqing {
+  left: 58.65724382%;
+  top: 63.30434783%;
+}
+.sichuan {
+  left: 50.05889282%;
+  top: 61.56521739%;
+}
+.guizhou {
+  left: 57.00824499%;
+  top: 73.73913043%;
+}
+.yunnan {
+  left: 405px;
+  top: 462px;
+}
+.shanxi1 {
+  left: 59.12838634%;
+  top: 54.26086957%;
+}
+.map-dot:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 0 auto;
+  background-color: #01B7BD;
+  border-radius: 50%;
+}
+.map-dot.beijing:after {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.map-dot.jiangxi:after {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: red;
+  /* color:red; */
+}
+.branch-map-data {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 430px;
+  border: 1px solid #01B7BD;
+  -webkit-box-shadow: 0 0 2px 2px #e9e9e9;
+          box-shadow: 0 0 2px 2px #e9e9e9;
+  background-color: #fff;
+  padding: 10px 30px;
+  z-index: 1;
+  display: none;
+}
+.branch-map-data-title {
+  border-bottom: 1px solid #eee;
+}
+.branch-map-data-title p {
+  font-size: 18px;
+  color: #333;
+  line-height: 28px;
+}
+.branch-map-data-info {
+  max-height: 236px;
+  overflow-y: auto;
+}
+.data-branch {
+  border-bottom: 1px dashed #eee;
+  padding: 6px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.data-branch:last-child {
+  border: none;
+}
+.data-branch .data-name {
+  font-size: 14px;
+  color: #666;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+.data-branch p {
+  font-size: 12px;
+  color: #999;
+  line-height: 20px;
+}
+.data-branch p {
+  font-size: 12px;
+  color: #999;
+  line-height: 20px;
+}
+.branch-map-data:before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border: 8px solid;
+  border-color: transparent #01B7BD transparent transparent;
+}
+.branch-map-data:after {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border: 8px solid;
+  border-color: transparent #fff transparent transparent;
+}
+.map-dot.cur:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #01B7BD;
+  -webkit-animation: dot 4s infinite;
+          animation: dot 4s infinite;
+}
+@-webkit-keyframes dot {
+  100% {
+    -webkit-transform: translateX(-50%) scale(1);
+            transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateX(-50%) scale(1.5);
+            transform: translateX(-50%) scale(1.5);
+    opacity: .1;
+  }
+}
+@keyframes dot {
+  100% {
+    -webkit-transform: translateX(-50%) scale(1);
+            transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateX(-50%) scale(1.5);
+            transform: translateX(-50%) scale(1.5);
+    opacity: .1;
+  }
+}
+.map-table {
+  display: table;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/map-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.map-table a {
+  text-decoration: none;
+  color: #000;
+}
+.map-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.map-text-info {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  color: white;
+  /* font-weight: bold; */
+  font-size: 35px;
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  text-shadow: 2px 2px 5px black;
+}
+.map-container {
+  height: 100%;
+}
+
