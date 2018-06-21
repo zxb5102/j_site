@@ -430,5 +430,49 @@
 }
 .map-container {
   height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/*云朵运动的动画*/
+.map-container .cloud-top {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 60%;
+  -webkit-animation: top-cloud-move 50s cubic-bezier(0, 0, 1, 1) infinite alternate;
+          animation: top-cloud-move 50s cubic-bezier(0, 0, 1, 1) infinite alternate;
+}
+.map-container .cloud-bottom {
+  position: absolute;
+  height: 60%;
+  right: 0px;
+  bottom: 0px;
+  -webkit-animation: bottom-cloud-move 80s cubic-bezier(0, 0, 1, 1) infinite alternate;
+          animation: bottom-cloud-move 80s cubic-bezier(0, 0, 1, 1) infinite alternate;
+}
+@-webkit-keyframes bottom-cloud-move {
+  100% {
+    -webkit-transform: translateX(-2000px);
+            transform: translateX(-2000px);
+  }
+}
+@keyframes bottom-cloud-move {
+  100% {
+    -webkit-transform: translateX(-2000px);
+            transform: translateX(-2000px);
+  }
+}
+@-webkit-keyframes top-cloud-move {
+  100% {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+  }
+}
+@keyframes top-cloud-move {
+  100% {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+  }
 }
 
