@@ -459,14 +459,20 @@
 /*页尾*/
 .foot-index {
 	background: #1e1b29;
-	height: calc(100% - 713px);
+	height: calc(100% - 685px);
 }
 .foot-index-info {
 	width: 1200px;
 	margin: 0 auto;
 	color: #fff;
-	padding: 150px 15px;
+	padding: 30px 15px;
 	font-size: 16px;
+}
+.foot-index-img {
+	margin-bottom: 20px;
+}
+.foot-index-info img {
+	width: 200px;
 }
 .foot-index-info div {
 	text-align: center;
