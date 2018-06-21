@@ -6,6 +6,13 @@ $(function() {
 		let target = $(event.target);
 		index = $(".focus-btn").index(this);
 		target.addClass('focus-btn-active');
+		let list = $('.nav-item');
+		$('.nav-item').removeClass('nav-item-active');
+		for(let i=0;i<list.length;i++) {
+			if(index==i) {
+				$(list[i]).addClass('nav-item-active')
+			}
+		}
 		slider();
 		if(index == 1) {
 			second_page();
@@ -21,26 +28,46 @@ $(function() {
 			slider();
 		}
 	});
+	$(".nav-rt").on("click",".nav-item",function(event) {
+		index = $(".nav-item").index(this);
+		$(".nav-item").removeClass('nav-item-active');
+		let target = $(event.target);
+		target.addClass('nav-item-active');
+		$(".focus-btn").removeClass('focus-btn-active');
+		let list = $(".focus-btn");
+		for(let i=0;i<list.length;i++) {
+			if(index==i) {
+				$(list[i]).addClass('focus-btn-active')
+			}
+		}
+		slider();
+		if(index == 1) {
+			second_page();
+		}
+	})
 	function second_page() {
     	$('.cover-hand-move').css('display','none');
     	$('.container-hand-move-s').css('display','block');
     	$('.container-hand-move-s').addClass('container-hand-move');
     	$('.hold-hand-s').addClass('hold-hand');
+    	$('.aptitude-list').css('width','320px')
 	};
 	function up_slider() {
 		if(index > 0) {
 			index--;
 			$($(".focus-btn-active").prev()).addClass('focus-btn-active');
-			let list = $(".focus-btn-active");
-			$(list[1]).removeClass('focus-btn-active');
+			$($(".focus-btn-active")[1]).removeClass('focus-btn-active');
+			$($(".nav-item-active").prev()).addClass('nav-item-active');
+			$($(".nav-item-active")[1]).removeClass('nav-item-active');
 		}
 	};
 	function down_slider() {
 		if(index < $(".focus-btn").length-1) {
 			index++;
 			$($(".focus-btn-active").next()).addClass('focus-btn-active');
-			let list = $(".focus-btn-active");
-			$(list[0]).removeClass('focus-btn-active');
+			$($(".focus-btn-active")[0]).removeClass('focus-btn-active');
+			$($(".nav-item-active").next()).addClass('nav-item-active');
+			$($(".nav-item-active")[0]).removeClass('nav-item-active');
 		}
 	};
 	function slider() {
@@ -78,10 +105,13 @@ $(function() {
 	}
 	//视频播放事件
 	let myVideo = document.getElementById('video');
+	myVideo.play()
 	myVideo.addEventListener("canplay",function() {
 		setTimeout(() => {
 			$('.video-txt-left').addClass('video-txt-show');
 		},1000);
+		
+		console.log('s')
 		$(document).keyup(function(event){
 			if(event.keyCode == 38){
 				up_slider();
@@ -91,6 +121,7 @@ $(function() {
 				down_slider();
 				slider();
 			}
+			console.log(event.keyCode)
 		});
 	})
 });
