@@ -297,6 +297,11 @@
 	font-size: 30px;
 	font-weight: 700;
     text-shadow: 2px 2px 5px black;
+    opacity: 0;
+}
+.second-page-title-active {
+	transition: all 3s;
+	opacity: 1;
 }
 /*.second-page-title :first-child {
 	margin-bottom: 15px;

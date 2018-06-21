@@ -1,25 +1,22 @@
 $(function() {
-	let height = $(".banner").innerHeight();
-	let index = 0;
+	varheight = $(".banner").innerHeight();
+	var index = 0;
 	$(".focus-list").on("click",".focus-btn",function(event) {
 		$(".focus-btn").removeClass('focus-btn-active');
-		let target = $(event.target);
+		var target = $(event.target);
 		index = $(".focus-btn").index(this);
 		target.addClass('focus-btn-active');
-		let list = $('.nav-item');
+		var list = $('.nav-item');
 		$('.nav-item').removeClass('nav-item-active');
-		for(let i=0;i<list.length;i++) {
+		for(var i=0;i<list.length;i++) {
 			if(index==i) {
 				$(list[i]).addClass('nav-item-active')
 			}
 		}
 		slider();
-		if(index == 1) {
-			second_page();
-		}
 	});
 	$(".focus-arrow-list").on("click",".focus-arrow",function(event) {
-		let arrow_type = $(".focus-arrow").index(this);
+		var arrow_type = $(".focus-arrow").index(this);
 		if(!arrow_type) {
 			up_slider();
 			slider();
@@ -31,21 +28,19 @@ $(function() {
 	$(".nav-rt").on("click",".nav-item",function(event) {
 		index = $(".nav-item").index(this);
 		$(".nav-item").removeClass('nav-item-active');
-		let target = $(event.target);
+		var target = $(event.target);
 		target.addClass('nav-item-active');
 		$(".focus-btn").removeClass('focus-btn-active');
-		let list = $(".focus-btn");
-		for(let i=0;i<list.length;i++) {
+		var list = $(".focus-btn");
+		for(var i=0;i<list.length;i++) {
 			if(index==i) {
 				$(list[i]).addClass('focus-btn-active')
 			}
 		}
 		slider();
-		if(index == 1) {
-			second_page();
-		}
 	})
 	function second_page() {
+		$(".second-page-title").addClass('second-page-title-active');
     	$('.cover-hand-move').css('display','none');
     	$('.container-hand-move-s').css('display','block');
     	$('.container-hand-move-s').addClass('container-hand-move');
@@ -71,14 +66,14 @@ $(function() {
 		}
 	};
 	function slider() {
-		let height = $(".banner").innerHeight();
+		var height = $(".banner").innerHeight();
 		$(".banner-list").css("top",-(height*index));
 		if(index == $(".banner").length-1) {
-			setTimeout(()=>{
+			setTimeout(function(){
 				$(".focus-arrow-list").css("display","none");
 			},700)
 		}else{
-			setTimeout(()=>{
+			setTimeout(function(){
 				$(".focus-arrow-list").css("display","block");
 			},700)
 		}
@@ -87,27 +82,68 @@ $(function() {
 		}else{
 			$(".nav-active").removeClass("nav-active");
 		}
-		
-		if(index == 1) {
-			setTimeout(()=>{
-				second_page();
-			},500)
-		}if(index == 2) {
-			setTimeout(()=>{
-				$(".thirdly-page-bg").addClass('thirdly-page-bg-s');
-			},500)
-		}if(index == 3) {
-			setTimeout(()=>{
-				$(".fourthly-page .outline-s").addClass('outline');
-				$(".fourthly-page .outline-s").css("display","block")
-			},500)
+		switch (index){
+			case 1:
+				setTimeout(function(){
+					second_page();
+				},500)
+				break;
+			case 2:
+				setTimeout(function(){
+					$(".thirdly-page-bg").addClass('thirdly-page-bg-s');
+				},500)
+				break;
+			case 3:
+				setTimeout(function(){
+					$(".fourthly-page .outline-s").addClass('outline');
+					$(".fourthly-page .outline-s").css("display","block")
+				},500)
+				break;
 		}
 	}
+	function status () {
+		$(".nav-item-active").removeClass('nav-item-active');
+		$(".focus-btn-active").removeClass('focus-btn-active');
+		for(var i=0;i<$(".nav-item").length;i++) {
+			if(index == i){
+				$($(".nav-item")[i]).addClass('nav-item-active');
+				$($(".focus-btn")[i]).addClass('focus-btn-active');
+			}
+		}
+	}
+	jQuery(function($) {
+		var slider_status = true;
+		$('.banner-list')
+		.bind('mousewheel', function(event, delta) {
+			if(!slider_status) {
+				return false;
+			}
+			var dir = delta > 0 ? 'Up' : 'Down';
+			if (dir == 'Up') {
+				if(index > 0) {
+					index--;
+					slider();
+					status();
+				}
+			} else {
+				if(index < $(".focus-btn").length-1) {
+					index++;
+					slider();
+					status();
+				}
+			}
+			slider_status = false;
+			setTimeout(function(){
+				slider_status = true;
+			},500);
+			return false;
+		});
+	});
 	//视频播放事件
-	let myVideo = document.getElementById('video');
-	myVideo.play()
+	var myVideo = document.getElementById('video');
+//	myVideo.play()
 	myVideo.addEventListener("canplay",function() {
-		setTimeout(() => {
+		setTimeout(function(){
 			$('.video-txt-left').addClass('video-txt-show');
 		},1000);
 		
@@ -158,3 +194,5 @@ $(function () {
         });
     }
 });
+
+
