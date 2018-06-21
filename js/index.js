@@ -85,18 +85,18 @@ $(function() {
 		switch (index){
 			case 1:
 				setTimeout(function(){
-					second_page();
+					$(".fourthly-page .outline-s").addClass('outline');
+					$(".fourthly-page .outline-s").css("display","block")
 				},500)
 				break;
 			case 2:
 				setTimeout(function(){
-					$(".thirdly-page-bg").addClass('thirdly-page-bg-s');
+					second_page();
 				},500)
 				break;
 			case 3:
 				setTimeout(function(){
-					$(".fourthly-page .outline-s").addClass('outline');
-					$(".fourthly-page .outline-s").css("display","block")
+					$(".thirdly-page-bg").addClass('thirdly-page-bg-s');
 				},500)
 				break;
 		}

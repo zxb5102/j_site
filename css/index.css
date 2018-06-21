@@ -163,6 +163,12 @@
 }
 
 /*页面一*/
+#video {
+	position:absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%)
+}
 .video-wrapper {
 	width: 100%;
 	height:calc(100vh - 28px);
@@ -245,15 +251,15 @@
 .banner:nth-child(1){
 	/*background: red;*/
 }
-.banner:nth-child(2){
+.banner:nth-child(3){
 	background-image: url(../img/glass.png);
 	background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-.banner:nth-child(3){
+/*.banner:nth-child(3){
 	background: blue;
-}
+}*/
 /*轮播图按钮*/
 .focus-list {
 	position: absolute;
@@ -287,10 +293,13 @@
 	border: 1px solid #00BBEE;				
 }
 /*页面二*/
+.second-page {
+	background-image: url(../img/glass.png);
+}
 .second-page-title {
 	position: absolute;
-	top: 260px;
-	left: 100px;
+	top: 20%;
+	left: 10%;
 	z-index: 2000;
 	font-size: 16px;
 	color: #fff;
@@ -323,6 +332,11 @@
 	text-shadow: 0px 0 8px #000;
 	width: 320px;
 	font-weight: 700;
+}
+.hold-hand-s img{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-touch-select: none;
 }
 /*页面三*/
 .thirdly-page-bg {
