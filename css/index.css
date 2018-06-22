@@ -317,19 +317,21 @@
 }
 .second-page-title {
 	position: absolute;
-	top: 20%;
-	left: 10%;
+	top: 24%;
+	left: 3%;
 	z-index: 2000;
-	font-size: 16px;
+	/* font-size: 16px; */
 	color: #fff;
-	font-size: 30px;
-	font-weight: 700;
+	font-size: 39px;
+	/* font-weight: 700; */
     text-shadow: 2px 2px 5px black;
     opacity: 0;
 }
 .second-page-title-active {
 	transition: all 3s;
 	opacity: 1;
+	font-family: video-top-font;
+    letter-spacing: 5px;
 }
 .second-page .container-hand-move-ie .hand {
 	transform: rotate(35deg);
