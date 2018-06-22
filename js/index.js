@@ -179,12 +179,16 @@ $(document).ready(function(){
 		//视频播放事件
 		var myVideo = document.getElementById('video');
 		myVideo.addEventListener("canplay",function() {
-			//myVideo.play()
+			setTimeout(function(){
+				document.querySelector('.video-top-text').classList.add('video-top-text-an-z');
+			},4000);
+			setTimeout(function(){
+				document.querySelector('.video-end-hold').classList.add('video-end-hold-in');
+			},7000);
 			setTimeout(function(){
 				$('.video-txt-left').addClass('video-txt-show');
 			},1000);
 			
-			// console.log('s')
 			$(document).keyup(function(event){
 				if(event.keyCode == 38){
 					up_slider();
