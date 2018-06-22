@@ -76,14 +76,15 @@
 .nav-lef {
 	position: relative;
 	height: 80px;
-	width: 240px;
+	width: 180px;
 	line-height: 80px;
-	background-image: url(../img/logo_s.png);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
 }
-
+.nav-lef img{
+	position: absolute;
+	top: calc(50% - 29px);
+	left: -15px;
+	width: 100%;
+}
 .nav-item {
 	height: 80px;
 	line-height: 80px;
@@ -171,7 +172,13 @@
 .wrapper-foot-item:active{
 	opacity: 1!important;
 }
-
+.wrapper-foot-item a {
+	color: #fff;
+}
+.wrapper-foot-item a:hover {
+	color: #fff!important;
+	opacity: 0.7;
+}
 /*页面一*/
 #video {
 	position:absolute;
@@ -433,14 +440,7 @@
 	/*text-align: left;*/
 }
 /*页面四*/
-.fourthly-page .fourthly-page-uri a {
-	font-size: 16px!important;
-	letter-spacing: 3px;
-	color: #00BBEE;
-}
-.fourthly-page .fourthly-page-uri a:hover {
-	text-decoration:underline
-}
+
 /*页面六*/
 .company-storys {
 	height: calc((100% - 85px)*2/3);
