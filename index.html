@@ -12,7 +12,8 @@
 		<link rel="stylesheet" href="./Animate/animate.min.css">
 		<link href="./css/styles.css" rel="stylesheet"/>
 		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css"/>
-		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+		<!--<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>-->
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="./js/jquery.mousewheel.js"></script>
 	</head>
 	<body>
@@ -48,20 +49,15 @@
 			<div class="nav nav-active">
 				<div class="nav-info content clear">
 					<div class="nav-lef float-lef">
-						<img src="./img/logo_s.png" alt="" style="position: absolute;top: calc(50% - 23px);width: 100%;"/>
+						<!--<img src="./img/logo_s.png" alt="" style="position: absolute;top: calc(50% - 23px);width: 100%;"/>-->
 					</div>
 					<ul class="nav-rt float-rt clear">
-						<!--<li class="float-lef"><a href="#">首页</a></li>-->
 						<li class="nav-item nav-item-active float-lef">企业概况</li>
-						<li class="nav-item float-lef">业务领域</li>
-						<!--<li class="float-lef"><a href="#">荣誉资质</a></li>-->
-						<li class="nav-item float-lef">新闻中心</li>
 						<li class="nav-item float-lef">产业园</li>
+						<li class="nav-item float-lef">业务领域</li>
+						<li class="nav-item float-lef">新闻中心</li>
 						<li class="nav-item float-lef">分公司网络</li>
 						<li class="nav-item float-lef">关于我们</li>
-						<!--<li class="float-lef"><a href="#">分公司网络</a></li>
-						<li class="float-lef"><a href="#">人才战略</a></li>
-						<li class="float-lef"><a href="#">联系我们</a></li>-->
 					</ul>
 				</div>
 			</div>
@@ -72,53 +68,36 @@
 			          <div class="wrapper">
 			          	<div class="video-txt clear">
 			          		<div class="video-txt-left float-lef video-txt-hidden">
-			          			<div>中国装饰百强企业</div>
+			          			<div class="float-lef">中国装饰百强企业</div>
 			          			<div class="float-lef">改革开放三十年幕墙行业功勋企业</div>
 			          			<div class="float-lef">中国幕墙50强企业</div>
 			          		</div>
 			          	</div>
 						<div class="video-wrapper">
-						    <video id="video" autoplay="autoplay" loop="loop" width="1920" poster="./img/arc-bg.png"
-						    	src="./video/video02.webm">
-						        <!--<source  />-->
-						        your browser does not support the video tag
-						    </video>
-						    <!--<video id="video" controls="controls" autoplay="autoplay" loop="loop" width="1920" poster="./img/arc-bg.png">
+						    <video id="video" autoplay="autoplay" width="1920" poster="./img/arc-bg.png">
 						        <source src="./video/video02.webm" />
 						        your browser does not support the video tag
-						    </video>-->
+						    </video>
 						</div>
 						<div class="wrapper-foot">
 							<div class="wrapper-foot-info clear">
 								<div class="wrapper-foot-item float-lef">
 									<span class="wrapper-foot-icon">
-										<i class="ion-ios-world-outline"></i>
+										<i class="ion-navicon-round"></i>
 									</span>
-									<span class="foot-icon-txt">公司新闻</span>
-								</div>
-								<div class="wrapper-foot-item float-lef">
-									<span class="wrapper-foot-icon">
-										<i class="ion-ribbon-b"></i>
-									</span>
-									<span class="foot-icon-txt">设计师精品</span>
+									<span class="foot-icon-txt">企业简介</span>
 								</div>
 								<div class="wrapper-foot-item float-lef">
 									<span class="wrapper-foot-icon">
 										<i class="ion-radio-waves"></i>
 									</span>
-									<span class="foot-icon-txt">行业资讯</span>
+									<span class="foot-icon-txt">董事长致辞</span>
 								</div>
 								<div class="wrapper-foot-item float-lef">
 									<span class="wrapper-foot-icon">
 										<i class="ion-android-bulb"></i>
 									</span>
-									<span class="foot-icon-txt">创意装饰</span>
-								</div>
-								<div class="wrapper-foot-item float-lef">
-									<span class="wrapper-foot-icon">
-										<i class="ion-android-bulb"></i>
-									</span>
-									<span class="foot-icon-txt">创意装饰</span>
+									<span class="foot-icon-txt">企业理念</span>
 								</div>
 							</div>
 						</div>
@@ -132,7 +111,12 @@
 					        <img src="./img/arc-outline-black.png" class="outline-black">
 					        <img src="./img/arc-outline.png" class="outline-s" style="display: none;">
 					        <div class="arc-info">
-					            <p>中航长江设计师产业园</p>
+					            <p>
+				            		<span>中航长江设计师产业园</span>
+					            	<span class="fourthly-page-uri">
+					            		<a href="http://cyy.zhcjjs.com" target="_Blank">http://cyy.zhcjjs.com</a>
+					            	</span>
+					            </p>
 					            <span class="text-con">互联网+传统工程行业进行产业升级的众创型空间</span>
 					        </div>
 					    </div>
@@ -140,33 +124,21 @@
 							<div class="wrapper-foot-info clear">
 								<div class="wrapper-foot-item float-lef">
 									<span class="wrapper-foot-icon">
-										<i class="ion-ios-world-outline"></i>
+										<i class="ion-ios-color-wand"></i>
 									</span>
-									<span class="foot-icon-txt">公司新闻</span>
+									<span class="foot-icon-txt">产业园官网</span>
 								</div>
 								<div class="wrapper-foot-item float-lef">
 									<span class="wrapper-foot-icon">
-										<i class="ion-ribbon-b"></i>
+										<i class="ion-university"></i>
 									</span>
-									<span class="foot-icon-txt">设计师精品</span>
+									<span class="foot-icon-txt">专业领域</span>
 								</div>
 								<div class="wrapper-foot-item float-lef">
 									<span class="wrapper-foot-icon">
-										<i class="ion-radio-waves"></i>
+										<i class="ion-person-stalker"></i>
 									</span>
-									<span class="foot-icon-txt">行业资讯</span>
-								</div>
-								<div class="wrapper-foot-item float-lef">
-									<span class="wrapper-foot-icon">
-										<i class="ion-android-bulb"></i>
-									</span>
-									<span class="foot-icon-txt">创意装饰</span>
-								</div>
-								<div class="wrapper-foot-item float-lef">
-									<span class="wrapper-foot-icon">
-										<i class="ion-android-bulb"></i>
-									</span>
-									<span class="foot-icon-txt">创意装饰</span>
+									<span class="foot-icon-txt">入驻团队</span>
 								</div>
 							</div>
 						</div>
@@ -198,33 +170,21 @@
 							<div class="wrapper-foot-info clear">
 								<div class="wrapper-foot-item float-lef">
 									<span class="wrapper-foot-icon">
-										<i class="ion-ios-world-outline"></i>
+										<i class="ion-ribbon-a"></i>
 									</span>
-									<span class="foot-icon-txt">公司新闻</span>
+									<span class="foot-icon-txt">企业荣誉</span>
+								</div>
+								<div class="wrapper-foot-item float-lef">
+									<span class="wrapper-foot-icon">
+										<i class="ion-ios-ionic-outline"></i>
+									</span>
+									<span class="foot-icon-txt">业务范围</span>
 								</div>
 								<div class="wrapper-foot-item float-lef">
 									<span class="wrapper-foot-icon">
 										<i class="ion-ribbon-b"></i>
 									</span>
-									<span class="foot-icon-txt">设计师精品</span>
-								</div>
-								<div class="wrapper-foot-item float-lef">
-									<span class="wrapper-foot-icon">
-										<i class="ion-radio-waves"></i>
-									</span>
-									<span class="foot-icon-txt">行业资讯</span>
-								</div>
-								<div class="wrapper-foot-item float-lef">
-									<span class="wrapper-foot-icon">
-										<i class="ion-android-bulb"></i>
-									</span>
-									<span class="foot-icon-txt">创意装饰</span>
-								</div>
-								<div class="wrapper-foot-item float-lef">
-									<span class="wrapper-foot-icon">
-										<i class="ion-android-bulb"></i>
-									</span>
-									<span class="foot-icon-txt">创意装饰</span>
+									<span class="foot-icon-txt">精品工程</span>
 								</div>
 							</div>
 						</div>
@@ -236,22 +196,22 @@
 								<img class="thirdly-page-bg" src="./img/bg03.jpg" alt="" />
 							</div>
 							<div class="photo-list">
-								<div class='photo-item float-lef'>
+								<div class='photo-item photo-item-01 float-lef'>
 									<div class="photo-item-img photo-item-img-1"></div>
 									<div class="photo-title">公司新闻</div>
 									<div class="photo-txt">员工生日餐</div>
 								</div>
-								<div class='photo-item float-lef'>
+								<div class='photo-item photo-item-02 float-lef'>
 									<div class="photo-item-img photo-item-img-2"></div>
 									<div class="photo-title">行业资讯</div>
 									<div class="photo-txt"><span>5月中国外贸超预期增长8.6% 未来贸易顺差将缩减</span></div>
 								</div>
-								<div class='photo-item float-lef'>
+								<div class='photo-item photo-item-03 float-lef'>
 									<div class="photo-item-img photo-item-img-3"></div>
 									<div class="photo-title">创意装饰</div>
 									<div class="photo-txt">伊朗自然为依托的PolourRock体育馆</div>
 								</div>
-								<div class='photo-item float-lef'>
+								<div class='photo-item photo-item-04 float-lef'>
 									<div class="photo-item-img photo-item-img-4"></div>
 									<div class="photo-title">作品集锦</div>
 									<div class="photo-txt">长宇规划设计之二：御景龙湾规划设计</div>
@@ -720,7 +680,7 @@
 									<span>中航长江建设工程有限公司 版权所有.ZHCJJS.COM All rights reserved.</span>
 								</div>
 								<div class="margin-top-15">
-									<span> 赣ICP备08100458号</span>
+									<span>赣ICP备14007784号-1</span>
 								</div>
 							</div>
 						</div>
