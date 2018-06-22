@@ -75,8 +75,15 @@
 }
 .nav-lef {
 	position: relative;
-	height: 85px;
-	width: 110px;
+	height: 80px;
+	width: 180px;
+	line-height: 80px;
+}
+.nav-lef img{
+	position: absolute;
+	top: calc(50% - 29px);
+	left: -15px;
+	width: 100%;
 }
 .nav-item {
 	height: 80px;
@@ -113,7 +120,11 @@
 .banner-list .banner:nth-child(2) .wrapper{
 	background: url(../img/glass.png);
 }
-
+.banner:nth-child(1) .wrapper-foot-item, 
+.banner:nth-child(2) .wrapper-foot-item,
+.banner:nth-child(3) .wrapper-foot-item{
+	width: 33%;
+}
 /*底部导航条*/
 .wrapper-foot {
 	position: absolute;
@@ -161,13 +172,21 @@
 .wrapper-foot-item:active{
 	opacity: 1!important;
 }
-
+.wrapper-foot-item a {
+	color: #fff;
+}
+.wrapper-foot-item a:hover {
+	color: #fff!important;
+	opacity: 0.7;
+}
 /*页面一*/
 #video {
 	position:absolute;
-	left: 50%;
+	top: 0;
+	left: 0;
+	/*left: 50%;
 	top:50%;
-	transform: translate(-50%,-50%)
+	transform: translate(-50%,-50%)*/
 }
 .video-wrapper {
 	width: 100%;
@@ -312,6 +331,9 @@
 	transition: all 3s;
 	opacity: 1;
 }
+.second-page .container-hand-move-ie .hand {
+	transform: rotate(35deg);
+}
 /*.second-page-title :first-child {
 	margin-bottom: 15px;
 }*/
@@ -372,11 +394,14 @@
 .photo-item:hover {
 	box-shadow: 0.2em 0.2em 0.8em #ad9ca0;
 }
-.photo-item:nth-child(odd){
-	transform: rotateZ(10deg);
-}
-.photo-item:nth-child(even){
+
+.photo-item:nth-child(even) {
 	transform: rotateZ(-10deg);
+	-ms-transform:rotate(-10deg)
+}
+.photo-item:nth-child(odd) {
+	transform: rotateZ(10deg);
+	-ms-transform:rotate(10deg)
 }
 .photo-item:first-child, .photo-item:last-child {
 	margin-top: -40px;
@@ -414,11 +439,16 @@
 	color: #999;
 	/*text-align: left;*/
 }
+/*页面四*/
+
 /*页面六*/
+.company-storys {
+	height: calc((100% - 85px)*2/3);
+}
 .company-story {
 	position: relative;
 	width: 33.3%;
-	height: 300px;
+	height: 50%;
 	background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -478,7 +508,7 @@
 /*页尾*/
 .foot-index {
 	background: #1e1b29;
-	height: calc(100% - 685px);
+	height: calc((100% - 85px)/3);
 }
 .foot-index-info {
 	width: 1200px;

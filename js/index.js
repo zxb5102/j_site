@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	var brower_type = '';
 	var get_browser_type = function() {
 		var agent = navigator.userAgent.toLowerCase() ;
 		 
@@ -10,7 +11,8 @@ $(document).ready(function(){
 		if(agent.indexOf("msie") > 0)
 		{
 		console.log(agent.match(regStr_ie));
-		
+			brower_type = 'ie';
+			second_page_ie();
 		}
 		 
 		//firefox
@@ -32,7 +34,6 @@ $(document).ready(function(){
 		}
 	};
 	get_browser_type();
-	$(function() {
 		varheight = $(".banner").innerHeight();
 		var index = 0;
 		$(".focus-list").on("click",".focus-btn",function(event) {
@@ -74,7 +75,14 @@ $(document).ready(function(){
 			slider();
 		})
 		function second_page_ie() {
-			
+			$(".second-page-title").addClass('second-page-title-active');
+	    	$('.cover-hand-move').css('display','none');
+	    	$('.container-hand-move-s').css('display','block');
+	    	$('.container-hand-move-s .hold-hand-s img').css('transform','rotate(35deg)');
+	    	$('.container-hand-move-s').addClass('container-hand-move-ie');
+	    	console.log($('.second-page-title'))
+	    	$('.hold-hand-s').addClass('hold-hand');
+	    	$('.aptitude-list').css('width','320px');
 		};
 		function second_page() {
 			$(".second-page-title").addClass('second-page-title-active');
@@ -127,9 +135,11 @@ $(document).ready(function(){
 					},500)
 					break;
 				case 2:
-					setTimeout(function(){
-						second_page();
-					},500)
+					if(brower_type != 'ie') {
+						setTimeout(function(){
+							second_page();
+						},500)
+					}
 					break;
 				case 3:
 					setTimeout(function(){
@@ -178,6 +188,7 @@ $(document).ready(function(){
 		});
 		//视频播放事件
 		var myVideo = document.getElementById('video');
+		myVideo.muted=true;
 		myVideo.addEventListener("canplay",function() {
 			setTimeout(function(){
 				document.querySelector('.video-top-text').classList.add('video-top-text-an-z');
@@ -201,7 +212,7 @@ $(document).ready(function(){
 				console.log(event.keyCode)
 			});
 		})
-	});
+
 	//页面五
 	$(function () {
 	    if ($(".map-branch")) {
