@@ -506,3 +506,86 @@
   -webkit-transform: rotate(35deg);
           transform: rotate(35deg);
 }
+/*视屏相关*/
+@font-face {
+  font-family: video-top-font;
+  src: url('../font/video-top-font.ttf');
+}
+
+.video-top-font {
+  font-family: video-top-font;
+  font-size: 30px;
+}
+
+.video-top-text {
+  position: absolute;
+  height: 200px;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  line-height: 70px;
+  z-index: 200;
+  color: white;
+  transition: 4s;
+  text-shadow: 2px 2px 5px black;
+}
+
+.video-top-text div {
+  font-family: video-top-font;
+  margin: 0px 50px 0px 0px;
+}
+
+.video-top-text :last-child {
+  margin: 0px;
+}
+
+.video-top-text-an-z {
+  opacity: 0;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+.video-top-logo-hold {
+  width: 300px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 5s;
+  z-index: 200;
+}
+
+.video-top-text-an-z-logo {
+  opacity: 1;
+}
+.video-end-hold{
+  position: absolute;
+  height:100%;
+  width:100%;
+  top:0px;
+  left:0px;
+  z-index: 211;
+  opacity: 0;
+  transition: 4s;
+  background-image: url(../img/video-end-img2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.video-end-hold-in{
+  opacity: 1;
+}
+
+.thirdly-page-top-text{
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  z-index: 300;
+  font-family: video-top-font;
+  font-size: 55px;
+  text-shadow: 2px 2px 5px black;
+}

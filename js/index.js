@@ -188,8 +188,15 @@ $(document).ready(function(){
 		myVideo.muted=true;
 		myVideo.addEventListener("canplay",function() {
 			setTimeout(function(){
+				document.querySelector('.video-top-text').classList.add('video-top-text-an-z');
+			},4000);
+			setTimeout(function(){
+				document.querySelector('.video-end-hold').classList.add('video-end-hold-in');
+			},7000);
+			setTimeout(function(){
 				$('.video-txt-left').addClass('video-txt-show');
 			},1000);
+			
 			$(document).keyup(function(event){
 				if(event.keyCode == 38){
 					up_slider();
