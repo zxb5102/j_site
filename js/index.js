@@ -190,9 +190,13 @@ $(document).ready(function(){
 		var myVideo = document.getElementById('video');
 		myVideo.muted=true;
 		myVideo.addEventListener("canplay",function() {
+			//myVideo.play()
 			setTimeout(function(){
 				$('.video-txt-left').addClass('video-txt-show');
 			},1000);
+			
+			// console.log('s')
+
 			$(document).keyup(function(event){
 				if(event.keyCode == 38){
 					up_slider();
@@ -205,7 +209,7 @@ $(document).ready(function(){
 				console.log(event.keyCode)
 			});
 		})
-	
+
 	//页面五
 	$(function () {
 	    if ($(".map-branch")) {
@@ -239,7 +243,3 @@ $(document).ready(function(){
 	    }
 	});
 })
-
-
-
-
