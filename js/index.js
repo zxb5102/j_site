@@ -14,19 +14,16 @@ $(document).ready(function(){
 			brower_type = 'ie';
 			second_page_ie();
 		}
-		 
 		//firefox
 		if(agent.indexOf("firefox") > 0)
 		{
 		console.log(agent.match(regStr_ff));
 		}
-		 
 		//Safari
 		if(agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0)
 		{
 		console.log(agent.match(regStr_saf));
 		}
-		 
 		//Chrome
 		if(agent.indexOf("chrome") > 0)
 		{
@@ -202,7 +199,6 @@ $(document).ready(function(){
 					down_slider();
 					slider();
 				}
-				console.log(event.keyCode)
 			});
 		})
 

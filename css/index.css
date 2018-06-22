@@ -6,12 +6,10 @@
 .top a {
 	color: #fff;
 }
-
 .top-lef > li, .top-rt > li {
 	height: 28px;
 	line-height: 28px;
 }
-
 .arrow-down-s {
 	cursor: pointer;
 	transition: all .3s;
@@ -53,7 +51,6 @@
 .client-serve-list li > a {
 	color: #1E1B29;
 }
-
 .focus-circlet {
 	padding: calc((100vh - 240px - 93px)/2) 0;
 	background: rgba(0,0,0,0.3);
@@ -92,7 +89,6 @@
 	font-size: 16px;
 	cursor: pointer;
 }
-
 .nav-item-active {
 	color: #00BBEE;
 }
@@ -125,7 +121,7 @@
 .banner:nth-child(3) .wrapper-foot-item{
 	width: 33%;
 }
-/*底部导航条*/
+/*轮播图--底部导航条*/
 .wrapper-foot {
 	position: absolute;
 	bottom: 0;
@@ -164,11 +160,9 @@
 	padding-left: 15px;
 	border-left: 0.5px solid #fff;
 }
-
 .wrapper-foot-item:hover {
 	opacity: .7;
 }
-
 .wrapper-foot-item:active{
 	opacity: 1!important;
 }
@@ -184,9 +178,6 @@
 	position:absolute;
 	top: 0;
 	left: 0;
-	/*left: 50%;
-	top:50%;
-	transform: translate(-50%,-50%)*/
 }
 .video-wrapper {
 	width: 100%;
@@ -225,19 +216,11 @@
 	transition: all 10s;
 	opacity: 1;
 }
-
 .video-txt p {
 	text-align: left;
 }
-.logo-wrapper {
-	position: absolute;
-	top: calc(50% - 50px);
-	left: calc(50% - 50px);
-	width: 100px;
-	height: 100px;
-	z-index: 26000;
-}
-/*页面二*/
+
+/*页面三*/
 .cover-hand-move {
   background-image: url(../img/glass.png);
   height: calc(100% - 85px);    
@@ -249,7 +232,6 @@
   overflow: hidden;
   text-align: left;
 }
-
 .slider-wrap {
 	position: relative;
 	height: calc(100vh - 28px);
@@ -257,7 +239,6 @@
 }
 .banner-list {
 	position: absolute;
-	/*top: 0;*/
 	left: 0;
 	transition: all 0.5s ease;
 }
@@ -267,18 +248,14 @@
 	width: 100vw;
 	min-width: 1200px;
 }
-.banner:nth-child(1){
-	/*background: red;*/
-}
+
 .banner:nth-child(3){
 	background-image: url(../img/glass.png);
 	background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-/*.banner:nth-child(3){
-	background: blue;
-}*/
+
 /*轮播图按钮*/
 .focus-list {
 	position: absolute;
@@ -311,7 +288,7 @@
 	background: #00BBEE;
 	border: 1px solid #00BBEE;				
 }
-/*页面二*/
+/*页面三*/
 .second-page {
 	background-image: url(../img/glass.png);
 }
@@ -334,9 +311,7 @@
 .second-page .container-hand-move-ie .hand {
 	transform: rotate(35deg);
 }
-/*.second-page-title :first-child {
-	margin-bottom: 15px;
-}*/
+
 .aptitude-list {
 	position: absolute;
 	top: 200px;
@@ -360,7 +335,7 @@
 	-moz-user-select: none;
 	-ms-touch-select: none;
 }
-/*页面三*/
+/*页面四*/
 .thirdly-page-bg {
 	transform: scale(1);
 	transition: all 5s;
@@ -434,12 +409,10 @@
 	margin-top: 5px;
 	width: 300px;
 	min-height: 80px;
-	/*line-height: 60px;*/
 	font-size: 16px;
 	color: #999;
-	/*text-align: left;*/
 }
-/*页面四*/
+/*页面五*/
 
 /*页面六*/
 .company-storys {
