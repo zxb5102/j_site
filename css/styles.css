@@ -92,6 +92,12 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.arc-container .arc-info p{
+  font-family: video-top-font;
+  text-align: left;
+  font-size: 37px;
+  text-shadow: 2px 2px 5px #fff;
+}
 .arc-container .arc-info {
   position: absolute;
   right: 10%;
@@ -427,6 +433,7 @@
       -ms-writing-mode: tb-rl;
           writing-mode: tb-rl;
   text-shadow: 2px 2px 5px black;
+  font-family:video-top-font;
 }
 .map-container {
   height: 100%;
