@@ -141,8 +141,8 @@ $(function() {
 	});
 	//视频播放事件
 	var myVideo = document.getElementById('video');
-//	myVideo.play()
 	myVideo.addEventListener("canplay",function() {
+		// myVideo.play()
 		setTimeout(function(){
 			$('.video-txt-left').addClass('video-txt-show');
 		},1000);
