@@ -685,6 +685,7 @@
     left: 50%;
     top: 36%;
     transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     height: 50%;
 }
 
