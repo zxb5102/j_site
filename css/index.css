@@ -1,80 +1,10 @@
-.top {
-    background: #1e1b29;
-    color: #fff;
-    font-size: 12px;
-}
-
-.top a {
-    color: #fff;
-}
-
-.top-lef>li,
-.top-rt>li {
-    height: 28px;
-    line-height: 28px;
-}
-
-.arrow-down-s {
-    cursor: pointer;
-    transition: all .3s;
-    transform: rotateZ(0deg);
-    font-size: 0;
-}
-
-.arrow-down-s img {
-    width: 16px;
-    vertical-align: middle;
-}
-
-.client-serve:hover .arrow-down-s {
-    transition: all .3s;
-    transform: rotateZ(180deg);
-}
-
-.client-serve {
-    position: relative;
-}
-
-.client-serve-list {
-    display: none;
-    position: absolute;
-    top: 28px;
-    left: -10px;
-    border: 1px #f1f1f1 solid;
-    border-width: 0 1px 1px 1px;
-    background: #fff;
-    padding: 5px 0;
-    margin: 1px;
-    z-index: 3000;
-}
-
-.client-serve:hover .client-serve-list {
-    display: block;
-}
-
-.client-serve-list li {
-    width: 80px;
-    height: 28px;
-    text-align: center;
-    line-height: 28px;
-}
-
-.client-serve-list li>a {
-    color: #1E1B29;
-}
-
-.focus-circlet {
-    padding: calc((100vh - 240px - 93px)/2) 0;
-    background: rgba(0, 0, 0, 0.3);
-}
-
 /*二级导航条*/
 
 .nav {
     transition: background 0.7s;
     background: rgba(255, 255, 255, .9);
     position: absolute;
-    top: 28px;
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 2600;
