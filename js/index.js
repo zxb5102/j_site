@@ -2,7 +2,6 @@ $(document).ready(function () {
 	var brower_type = '';
 	var get_browser_type = function () {
 		var agent = navigator.userAgent.toLowerCase();
-
 		var regStr_ie = /msie [\d.]+;/gi;
 		var regStr_ff = /firefox\/[\d.]+/gi
 		var regStr_chrome = /chrome\/[\d.]+/gi;
@@ -13,17 +12,14 @@ $(document).ready(function () {
 			brower_type = 'ie';
 			second_page_ie();
 		}
-
 		//firefox
 		if (agent.indexOf("firefox") > 0) {
 			console.log(agent.match(regStr_ff));
 		}
-
 		//Safari
 		if (agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0) {
 			console.log(agent.match(regStr_saf));
 		}
-
 		//Chrome
 		if (agent.indexOf("chrome") > 0) {
 			console.log(agent.match(regStr_chrome));
@@ -205,7 +201,6 @@ $(document).ready(function () {
 				down_slider();
 				slider();
 			}
-			console.log(event.keyCode)
 		});
 	})
 

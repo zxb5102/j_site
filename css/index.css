@@ -1,80 +1,10 @@
-.top {
-    background: #1e1b29;
-    color: #fff;
-    font-size: 12px;
-}
-
-.top a {
-    color: #fff;
-}
-
-.top-lef>li,
-.top-rt>li {
-    height: 28px;
-    line-height: 28px;
-}
-
-.arrow-down-s {
-    cursor: pointer;
-    transition: all .3s;
-    transform: rotateZ(0deg);
-    font-size: 0;
-}
-
-.arrow-down-s img {
-    width: 16px;
-    vertical-align: middle;
-}
-
-.client-serve:hover .arrow-down-s {
-    transition: all .3s;
-    transform: rotateZ(180deg);
-}
-
-.client-serve {
-    position: relative;
-}
-
-.client-serve-list {
-    display: none;
-    position: absolute;
-    top: 28px;
-    left: -10px;
-    border: 1px #f1f1f1 solid;
-    border-width: 0 1px 1px 1px;
-    background: #fff;
-    padding: 5px 0;
-    margin: 1px;
-    z-index: 3000;
-}
-
-.client-serve:hover .client-serve-list {
-    display: block;
-}
-
-.client-serve-list li {
-    width: 80px;
-    height: 28px;
-    text-align: center;
-    line-height: 28px;
-}
-
-.client-serve-list li>a {
-    color: #1E1B29;
-}
-
-.focus-circlet {
-    padding: calc((100vh - 240px - 93px)/2) 0;
-    background: rgba(0, 0, 0, 0.3);
-}
-
 /*二级导航条*/
 
 .nav {
     transition: background 0.7s;
     background: rgba(255, 255, 255, .9);
     position: absolute;
-    top: 28px;
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 2600;
@@ -143,13 +73,16 @@
     background: url(../img/glass.png);
 }
 
-.banner:nth-child(1) .wrapper-foot-item,
+.banner:nth-child(1) .wrapper-foot-item {
+    width: 25%;
+}
+
 .banner:nth-child(2) .wrapper-foot-item,
 .banner:nth-child(3) .wrapper-foot-item {
     width: 33%;
 }
 
-/*底部导航条*/
+/*轮播图--底部导航条*/
 
 .wrapper-foot {
     position: absolute;
@@ -218,9 +151,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    /*left: 50%;
-	top:50%;
-	transform: translate(-50%,-50%)*/
 }
 
 .video-wrapper {
@@ -271,16 +201,7 @@
     text-align: left;
 }
 
-.logo-wrapper {
-    position: absolute;
-    top: calc(50% - 50px);
-    left: calc(50% - 50px);
-    width: 100px;
-    height: 100px;
-    z-index: 26000;
-}
-
-/*页面二*/
+/*页面三*/
 
 .cover-hand-move {
     background-image: url(../img/glass.png);
@@ -302,7 +223,6 @@
 
 .banner-list {
     position: absolute;
-    /*top: 0;*/
     left: 0;
     transition: all 0.5s ease;
 }
@@ -312,10 +232,6 @@
     height: calc(100vh - 28px);
     width: 100vw;
     min-width: 1200px;
-}
-
-.banner:nth-child(1) {
-    /*background: red;*/
 }
 
 .banner:nth-child(3) {
@@ -363,7 +279,7 @@
     border: 1px solid #00BBEE;
 }
 
-/*页面二*/
+/*页面三*/
 
 .second-page {
     background-image: url(../img/glass.png);
@@ -374,31 +290,24 @@
     top: 24%;
     left: 3%;
     z-index: 2000;
+    /* font-size: 16px; */
     color: #fff;
-    font-size: 0px;
-    height: 9%;
+    font-size: 39px;
     /* font-weight: 700; */
     text-shadow: 2px 2px 5px black;
     opacity: 0;
 }
 
-.second-page-title img {
-    height: 100%;
-    width: auto;
-}
-
 .second-page-title-active {
     transition: all 3s;
     opacity: 1;
+    font-family: video-top-font;
+    letter-spacing: 5px;
 }
 
 .second-page .container-hand-move-ie .hand {
     transform: rotate(35deg);
 }
-
-/*.second-page-title :first-child {
-	margin-bottom: 15px;
-}*/
 
 .aptitude-list {
     position: absolute;
@@ -426,7 +335,7 @@
     -ms-touch-select: none;
 }
 
-/*页面三*/
+/*页面四*/
 
 .thirdly-page-bg {
     transform: scale(1);
@@ -514,13 +423,11 @@
     margin-top: 5px;
     width: 300px;
     min-height: 80px;
-    /*line-height: 60px;*/
     font-size: 16px;
     color: #999;
-    /*text-align: left;*/
 }
 
-/*页面四*/
+/*页面五*/
 
 /*页面六*/
 
