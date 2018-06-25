@@ -155,7 +155,7 @@
 
 .video-wrapper {
     width: 100%;
-    height: calc(100vh - 28px);
+    height: 100vh;
     position: relative;
     margin: auto;
     overflow: hidden;
@@ -217,7 +217,7 @@
 
 .slider-wrap {
     position: relative;
-    height: calc(100vh - 28px);
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -229,7 +229,7 @@
 
 .banner {
     position: relative;
-    height: calc(100vh - 28px);
+    height: 100vh;
     width: 100vw;
     min-width: 1200px;
 }
@@ -432,7 +432,7 @@
 /*页面六*/
 
 .company-storys {
-    height: calc((100% - 85px)*2/3);
+    height: calc((100% - 80px)*2/3);
 }
 
 .company-story {
@@ -510,7 +510,7 @@
 
 .foot-index {
     background: #1e1b29;
-    height: calc((100% - 85px)/3);
+    height: calc((100vh - 80px)/3);
 }
 
 .foot-index-info {
