@@ -2,28 +2,35 @@ $(document).ready(function () {
 	var brower_type = '';
 	var get_browser_type = function () {
 		var agent = navigator.userAgent.toLowerCase();
+		agent ="Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E; InfoPath.2; rv:11.0) like Gecko"
+
 		var regStr_ie = /msie [\d.]+;/gi;
 		var regStr_ff = /firefox\/[\d.]+/gi
 		var regStr_chrome = /chrome\/[\d.]+/gi;
 		var regStr_saf = /safari\/[\d.]+/gi;
 		//IE
-		if (agent.indexOf("msie") > 0) {
+		if (agent.indexOf("msie") > 0 || agent.indexOf("rv") > 0) {
 			console.log(agent.match(regStr_ie));
 			brower_type = 'ie';
 			second_page_ie();
+			return false;
 		}
-		//firefox
-		if (agent.indexOf("firefox") > 0) {
-			console.log(agent.match(regStr_ff));
-		}
-		//Safari
-		if (agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0) {
-			console.log(agent.match(regStr_saf));
-		}
-		//Chrome
-		if (agent.indexOf("chrome") > 0) {
-			console.log(agent.match(regStr_chrome));
-		}
+		// //firefox
+		// if (agent.indexOf("firefox") > 0) {
+		// 	console.log("firefox")
+		// 	console.log(agent.match(regStr_ff));
+		// }
+		// //Safari
+		// if (agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0) {
+		// 	console.log(agent.match(regStr_saf));
+		// 	console.log("safari")
+		// }
+		// //Chrome
+		// if (agent.indexOf("chrome") > 0) {
+		// 	console.log("chrome")
+		// 	console.log(agent.match(regStr_chrome));
+		// }
+		
 	};
 	get_browser_type();
 	varheight = $(".banner").innerHeight();
@@ -183,10 +190,10 @@ $(document).ready(function () {
 	myVideo.muted = true;
 	myVideo.addEventListener("canplay", function () {
 		setTimeout(function () {
-			document.querySelector('.video-top-text').classList.add('video-top-text-an-z');
+			$('.video-top-text').addClass('video-top-text-an-z');
 		}, 4000);
 		setTimeout(function () {
-			document.querySelector('.video-end-hold').classList.add('video-end-hold-in');
+			$('.video-end-hold').addClass('video-end-hold-in');
 		}, 7000);
 		setTimeout(function () {
 			$('.video-txt-left').addClass('video-txt-show');
