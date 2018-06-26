@@ -4,13 +4,13 @@
 }
 
 .container-hand-move {
-    background-image: url(../img/glass.png);
+    background-image: url(../img/glass01.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
-    top: 85px;
+    top: 80px;
     height: calc(100% - 85px);
     text-align: left;
 }
@@ -97,7 +97,7 @@
 .arc-container {
     position: relative;
     height: 100%;
-    background-image: url(../img/arc-bg.png);
+    background-image: url(../img/arc-bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -565,7 +565,7 @@
 /*ie下手滑动效果的降级方案*/
 
 .container-hand-move-ie {
-    background-image: url(./img/glass.png);
+    background-image: url(./img/glass01.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -678,7 +678,8 @@
     left: 0px;
     height: 40%;
     width: 100%;
-    background-image: url(../img/video-bg-arc.png);
+    background-image: url(../img/video-bg-arc01.png);
+    /* background-image: url(../img/test02s.jpg); */
     /* background-color: #b7b7b7; */
     background-position: center;
     background-size: contain;

@@ -70,7 +70,7 @@
 }
 
 .banner-list .banner:nth-child(2) .wrapper {
-    background: url(../img/glass.png);
+    background: url(../img/glass01.jpg);
 }
 
 .banner:nth-child(1) .wrapper-foot-item {
@@ -204,9 +204,9 @@
 /*页面三*/
 
 .cover-hand-move {
-    background-image: url(../img/glass.png);
+    background-image: url(../img/glass01.jpg);
     height: calc(100% - 85px);
-    top: 85px;
+    top: 80px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -235,7 +235,7 @@
 }
 
 .banner:nth-child(3) {
-    background-image: url(../img/glass.png);
+    background-image: url(../img/glass01.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -282,7 +282,7 @@
 /*页面三*/
 
 .second-page {
-    background-image: url(../img/glass.png);
+    background-image: url(../img/glass01.jpg);
 }
 
 .second-page-title {
