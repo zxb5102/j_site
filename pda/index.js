@@ -123,8 +123,13 @@ function banner_slider() {
 		if (event.targetTouches.length > 1) return;
 		var touch = event.targetTouches[0];
 		offset = { x: touch.clientX - start.x, y: touch.clientY - start.y };
-		if(top_list >= 0 && offset.y > 0 ||top_list <= -5*banner_height && offset.y < 0) {
-			console.log('return move')
+		console.log(offset.y)
+		if(top_list == 0 && offset.y > 0) {
+			$(".banner-list").css("top","0px");
+			return false;
+		}
+		if(top_list == -5*banner_height && offset.y < 0) {
+			$(".banner-list").css("top",-5*banner_height + "px");
 			return false;
 		}
 		if(offset.y<50&&offset.y>0||offset.y<0&&offset.y>-50) {
