@@ -93,7 +93,9 @@ function fourth_page() {
 function fifth_page() {
 	$('.fifth-page-map').on('touchstart','.map-dot',function(e){
 		$(".fifth-page-item").css("display","none");
-		$(".company_" + e.target.classList[1]).css("display","block")
+		$(".company_" + e.target.classList[1]).css("display","block");
+		
+		$(".company_" + e.target.classList[1]).addClass("flipInY animated")
 	})
 }
 function banner_slider() {

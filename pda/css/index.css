@@ -186,14 +186,14 @@ body {
 
 .second-page-txt {
     position: absolute;
-    top: 13rem;
+    top: 24rem;
     right: 1rem;
-    color: #fff;
+    /*color: #fff;*/
 }
 
 .second-page-info {
     font-size: 1rem;
-    border-top: 2px solid #fff;
+    border-top: 2px solid #000;
     margin-top: 0.5rem;
 }
 .second-page-img {
@@ -215,18 +215,18 @@ body {
 /* 界面三 */
 
 .third-page {
-    /*background: url(../img/third_bg.jpg) -8rem no-repeat;
+    /*background: url(../img/page03_bg.png) -8rem no-repeat;
     background-size: cover*/
 }
 .cover-hand-move {
     background-image: url(../img/page03_bg.png);
-    height: calc(100% - 80px);
-    top: 80px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
+    top: 4rem;
+    height: calc(100% - 4rem);
     text-align: left;
 }
 
@@ -247,9 +247,16 @@ body {
     color: #fff;
 }
 .aptitude-list div{
-	margin-top: 0.5rem;
+	margin-top: 0.2rem;
 	color: #fff;
 	text-shadow: 1px 1px 1px #000;
+}
+.cover-hand-move-wrapper {
+    background-image: url(../img/page03_bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 .container-hand-move {
     background-image: url(../img/page03_bg.png);
@@ -259,7 +266,7 @@ body {
     position: relative;
     overflow: hidden;
     top: 4rem;
-    height: calc(100% - 4rem);
+    height: calc(100vh - 4rem);
     text-align: left;
 }
 
@@ -320,7 +327,7 @@ body {
 @-webkit-keyframes xAxis {
     100% {
         top: 9%;
-        left: calc(50vh - 42.5px);
+        left: calc(50vh - 26.5px);
         -webkit-transform: rotate(35deg);
         transform: rotate(35deg);
     }
@@ -329,7 +336,7 @@ body {
 @keyframes xAxis {
     100% {
         top: -3%;
-        left: calc(10vh - 42.5px);
+        left: calc(10vh - 26.5px);
         -webkit-transform: rotate(35deg);
         transform: rotate(35deg);
     }
@@ -473,7 +480,7 @@ body {
 	background-repeat: no-repeat;
 }
 .fifth-page-top {
-	padding: 6rem 0 2rem 2rem;
+	padding: 6rem 0 0 2rem;
 	font-family: 'fzztjw' !important;
 	font-size: 1.6rem;
 	color: #fff;
@@ -556,16 +563,18 @@ body {
 .item-content {
 	padding: 0.2rem;
 	width: 7.1rem;
+	background: #4A75E6;
+	color: #fff;
 }
 .item-title, .item-txt {
 	text-align: center;
 }
 .item-txt {
 	width: 7.1rem;
-	height: 2.4rem;
+	height: 2.5rem;
 	margin-top: 0.2rem;
-	font-size: 10px;
-	color: #999;
+	/*font-size: 12px;*/
+	/*color: #999;*/
 	overflow:hidden; 
 	text-overflow:ellipsis;
 	display:-webkit-box; 
@@ -582,8 +591,8 @@ body {
 }
 
 .beijing {
-    left: 68.90459364%;
-    top: 38.26086957%;
+    left: 66.90459364%;
+    top: 33.26086957%;
 }
 
 .tianjin {
@@ -594,8 +603,8 @@ body {
 .hainan {
     /* left:200px;
     top:200px; */
-    left: 61.60188457%;
-    top: 93.04347826%;
+    left: 60.60188457%;
+    top: 88.04347826%;
 }
 
 .hebei {
@@ -610,7 +619,7 @@ body {
 
 .liaoning {
     left: 77.7385159%;
-    top: 34.08695652%;
+    top: 31.08695652%;
 }
 
 .xinjiang {
@@ -625,22 +634,22 @@ body {
 
 .heilongjiang {
     left: 79.62308598%;
-    top: 18.43478261%;
+    top: 16.43478261%;
 }
 
 .shanghai {
-    left: 78.68080094%;
-    top: 60.86956522%;
+    left: 76.68080094%;
+    top: 56.86956522%;
 }
 
 .jiangsu {
-    left: 76.08951708%;
-    top: 54.95652174%;
+    left: 75.08951708%;
+    top: 50.95652174%;
 }
 
 .zhejiang {
-    left: 77.14958775%;
-    top: 65.91304348%;
+    left: 76.14958775%;
+    top: 63.91304348%;
 }
 
 .anhui {
@@ -654,17 +663,17 @@ body {
 }
 
 .jiangxi {
-    left: 70.08244994%;
-    top: 69.91304348%;
+    left: 69.08244994%;
+    top: 67.91304348%;
 }
 
 .shandong {
-    left: 71.84923439%;
-    top: 49.39130435%;
+    left: 68.84923439%;
+    top: 45.39130435%;
 }
 
 .henan {
-    left: 562px;
+    left: 36px;
     top: 316px;
 }
 
@@ -679,8 +688,8 @@ body {
 }
 
 .guangdong {
-    left: 67.72673734%;
-    top: 81.04347826%;
+    left: 66.72673734%;
+    top: 76.04347826%;
 }
 
 .guangxi {
@@ -709,7 +718,7 @@ body {
 }
 
 .shanxi1 {
-    left: 59.12838634%;
-    top: 54.26086957%;
+    left: 57.12838634%;
+    top: 50.26086957%;
 }
 
