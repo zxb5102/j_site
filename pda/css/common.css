@@ -13,7 +13,9 @@ legend {color:#000;}
 fieldset, img {border:0;}
 button, input, select, textarea {font-size:100%;}
 table {border-collapse:collapse;border-spacing:0;}
-
+html {
+	height: 100%;
+}
 @media (min-width:640px){html{font-size:24px;}}
 @media (min-width:631px) and (max-width:639px){html{font-size:23.66px;}}
 @media (min-width:622px) and (max-width:630px){html{font-size:23.33px;}}

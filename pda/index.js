@@ -9,24 +9,12 @@ function top_nav() {
 		$(".nav-btn").css("top","100vh")
 	});
 	$(".nav-btn").on("click","div",function(e){
-		$(".nav-btn").css("top","100vh")
+		$(".nav-btn").css("top","100vh");
 		if($(this).data('id')) {
 			banner_index = $(this).data('id');
-		}
-		banner_top = -(banner_index*banner_height);
-		$(".banner-list").css("transition","top .5s");
-		$(".banner-list").css("top",banner_top + "px");
-		switch (banner_index){
-			case 1:
-				setTimeout(function(){
-					second_page();
-				},500)
-				break;
-			case 2:
-				setTimeout(function(){
-					third_page();
-				},1000)
-				break;
+			slider(function(mySwiper){
+				mySwiper.slideTo(banner_index, 1000, false);
+			})
 		}
 	})
 }
@@ -47,6 +35,7 @@ function first_page() {
         var cur = $(this);
         var s = 0.2 + Math.random() * 1;
         var curR = r + Math.random() * 300;
+        s > 0.7?s=s-0.2:'';
         cur.css({
             transformOrigin: '0 0 ' + curR + 'px',
             transform: ' translate3d(0,0,-' + curR + 'px) rotateY(' + Math.random() * 360 + 'deg) rotateX(' + Math.random() * -50 + 'deg) scale(' + s + ',' + s + ')'
@@ -91,102 +80,97 @@ function fourth_page() {
 	});
 }
 function fifth_page() {
-	$('.fifth-page-map').on('touchstart','.map-dot',function(e){
+	$(".fifth-page-list").css("top","60%");
+	$('.fifth-page-map').on('click','.map-dot',function(e){
 		$(".fifth-page-item").css("display","none");
+		if($(".company_" + e.target.classList[1]).height()<=100) {
+			$(".fifth-page-list").css("top","60%")
+		}else{
+			$(".fifth-page-list").css("top","40%")
+		};
 		$(".company_" + e.target.classList[1]).css("display","block");
 		
 		$(".company_" + e.target.classList[1]).addClass("flipInY animated")
 	})
 }
-function banner_slider() {
-	var	top_list = 0,
-		start = {},
-		offset = {},
-		item = document.getElementById('banner_slider');
-	function close_slider() {
-		item.removeEventListener("touchstart",touch_start);
-		item.removeEventListener("touchmove",touch_move);
-		item.removeEventListener("touchend",touch_end);
-	}
-	function open_slider() {
-		item.addEventListener('touchstart',touch_start);
-		item.addEventListener('touchmove',touch_move);
-		item.addEventListener('touchend', touch_end);
-	}
-	function touch_start (event) {
-       	if (event.targetTouches.length > 1) return;
-        var touch = event.targetTouches[0];
-    	top_list = parseInt($(".banner-list").css("top"));
-        start = { x: touch.clientX, y: touch.clientY };
-        $(".banner-list").css("transition","");
-        
-	}
-	function touch_move (event) {
-		if (event.targetTouches.length > 1) return;
-		var touch = event.targetTouches[0];
-		offset = { x: touch.clientX - start.x, y: touch.clientY - start.y };
-		console.log(offset.y)
-		if(top_list == 0 && offset.y > 0) {
-			$(".banner-list").css("top","0px");
-			return false;
-		}
-		if(top_list == -5*banner_height && offset.y < 0) {
-			$(".banner-list").css("top",-5*banner_height + "px");
-			return false;
-		}
-		if(offset.y<50&&offset.y>0||offset.y<0&&offset.y>-50) {
-			return false;
-		}
-		banner_top = top_list + offset.y;
-		$(".banner-list").css("top",banner_top + "px");
-	}
 
-	function touch_end (event) {
-		if (event.targetTouches.length > 1) return;
-		close_slider();
-		if(top_list >= 0 && offset.y > 0 ||top_list <= -5*banner_height && offset.y < 0) {
-			open_slider()
-			return false;
-		}else {
-			setTimeout(function(){
-				open_slider()
-			},500);
+var menu_html = "<div class='menu'><div class='share' id='ss_toggle' data-rot='180'><div><i class='ion-plus-round'></i></div></div></div>"
+function slider (callback) {
+	var mySwiper = new Swiper ('.swiper-container', {
+    	direction: 'vertical',
+		on: {
+		    transitionEnd: function(swiper){
+		    	console.log(this.activeIndex)
+		  		switch (this.activeIndex){
+		  			case 0:
+		  				$("#ss_menu").css("display","block");
+						$(".fa-qq").html("<a href='#'>企业简介</a>")
+						$(".fa-weibo").html("<a href='#'>董事长致辞</a>")
+						$(".fa-weixin").html("<a href='#'>企业理念</a>")
+						$(".fa-renren").html("<a href='#'>大事记</a>")
+						$(".fa-renren").parent().css("display","flex")
+		  				break;
+					case 1:
+						second_page();
+						$("#ss_menu").css("display","block");
+						$(".fa-qq").html("<a href='#'>产业园官网</a>")
+						$(".fa-weibo").html("<a href='#'>专业领域</a>")
+						$(".fa-weixin").html("<a href='#'>入驻团队</a>")
+						$(".fa-renren").html("")
+						$(".fa-renren").parent().css("display","none")
+						break;
+					case 2:
+						third_page();
+						$("#ss_menu").css("display","block");
+						$(".fa-qq").html("<a href='#'>企业荣誉</a>")
+						$(".fa-weibo").html("<a href='#'>业务范围</a>")
+						$(".fa-weixin").html("<a href='#'>精品工程</a>")
+						$(".fa-renren").html("")
+						$(".fa-renren").parent().css("display","none")
+						break;
+					case 3:
+						$("#ss_menu").css("display","block");
+						$(".fa-qq").html("<a href='#'>公司新闻</a>")
+						$(".fa-weibo").html("<a href='#'>设计师精品</a>")
+						$(".fa-weixin").html("<a href='#'>行业资讯</a>")
+						$(".fa-renren").html("<a href='#'>创意装饰</a>")
+						$(".fa-renren").parent().css("display","flex")
+						break;
+					case 4:
+						$("#ss_menu").css("display","none");
+						break;
+					case 4:
+						$("#ss_menu").css("display","none");
+						break;
+				}
+		    }
 		}
-		if(offset.y <= -50) {
-			banner_top = top_list - banner_height;
-			banner_index++
-		}else if(offset.y >= 50) {
-			banner_top = top_list + banner_height;
-			banner_index--
-		}else {
-			banner_top = top_list;
-		}
-		switch (banner_index){
-			case 1:
-				setTimeout(function(){
-					second_page();
-				},500)
-				break;
-			case 2:
-				setTimeout(function(){
-					third_page();
-				},1000)
-				break;
-		}
-
-		$(".banner-list").css("top",banner_top + "px");
-		$(".banner-list").css("transition","top .5s");
-		offset = {};
+  	});
+	if(typeof callback == "function") {
+	  	callback(mySwiper);
 	}
-
-	item.addEventListener('touchstart', touch_start);
-	item.addEventListener('touchmove',touch_move);
-	item.addEventListener('touchend', touch_end);
+}
+var toggle = $('#ss_toggle');
+var menu = $('#ss_menu');
+var rot;
+function bottom_nav() {
+    $('#ss_toggle').on('click', function (ev) {
+        rot = parseInt($(this).data('rot')) - 180;
+        menu.css('transform', 'rotate(' + rot + 'deg)');
+        menu.css('webkitTransform', 'rotate(' + rot + 'deg)');
+       	if(rot / 180 % 2 == 0) {
+       		$("#ss_toggle div").css('transform', 'rotate(' + (rot - 45) + 'deg)');
+       	}else {
+       		$("#ss_toggle div").css('transform', 'rotate(' + rot + 'deg)');
+       	}
+        $(this).data('rot', rot);
+    });
 }
 $(document).ready(function () {
     first_page();
     fourth_page();
     fifth_page();
-    banner_slider();
-    top_nav()
+	slider();
+    top_nav();
+	bottom_nav();
 });
