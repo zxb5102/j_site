@@ -12,9 +12,9 @@ function top_nav() {
 		$(".nav-btn").css("top","100vh");
 		if($(this).data('id')) {
 			banner_index = $(this).data('id');
-			bottom_nav_action(banner_index);
+//			bottom_nav_action(banner_index);
 			slider(function(mySwiper){
-				mySwiper.slideTo(banner_index, 1000, false);
+				mySwiper.slideTo(banner_index, 500, false);
 			})
 		}
 	})
@@ -94,6 +94,12 @@ function fifth_page() {
 		$(".company_" + e.target.classList[1]).addClass("flipInY animated")
 	})
 }
+function sixth_page() {
+	$(".sixth-page-item").css("transform","translateX(0)");
+	$(".sixth-page-item").css("opacity","1");
+	$(".sixth-page-item-s").css("transform","translateX(0)")
+	$(".sixth-page-item-s").css("opacity","1")
+}
 function bottom_nav_action(index) {
 	switch (index){
 		case 0:
@@ -134,6 +140,7 @@ function bottom_nav_action(index) {
 			$("#ss_menu").css("display","none");
 			break;
 		case 5:
+		sixth_page();
 			$("#ss_menu").css("display","none");
 			break;
 	}
@@ -143,7 +150,7 @@ function slider (callback) {
     	direction: 'vertical',
 		on: {
 		    transitionEnd: function(swiper){
-				bottom_nav_action(this.activeIndex)
+				bottom_nav_action(this.activeIndex);
 		    }
 		}
   	});

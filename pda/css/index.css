@@ -610,14 +610,18 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	box-shadow: 1px 1px 1px 1px #000;
+	transition: all 1s;
+	opacity: 0;
 }
 
 .sixth-page-item:nth-child(1) {
 	background-image: url(../img/sixth01.jpg);
 	margin-bottom: 0.6rem;
+	transform: translateX(-24.8rem);
 }
 .sixth-page-item:nth-child(2) {
 	background-image: url(../img/sixth05.jpg);
+	transform: translateX(24.8rem);
 }
 .sixth-page-item-s-wrapper {
 	width: 23rem;
@@ -634,15 +638,19 @@ body {
 }
 .sixth-page-item-s:nth-child(1) {
 	background-image: url(../img/sixth03.jpg);
+	transform: translateX(-12.6rem);
 }
 .sixth-page-item-s:nth-child(2) {
 	background-image: url(../img/sixth04.jpg);
+	transform: translateX(12.6rem);
 }
 .sixth-page-item-s:nth-child(3) {
 	background-image: url(../img/sixth02.jpg);
+	transform: translateX(-12.6rem);
 }
 .sixth-page-item-s:nth-child(4) {
 	background-image: url(../img/sixth06.jpg);
+	transform: translateX(12.6rem);
 }
 .item-content {
 	position: absolute;
