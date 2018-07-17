@@ -12,6 +12,7 @@ function top_nav() {
 		$(".nav-btn").css("top","100vh");
 		if($(this).data('id')) {
 			banner_index = $(this).data('id');
+			bottom_nav_action(banner_index);
 			slider(function(mySwiper){
 				mySwiper.slideTo(banner_index, 1000, false);
 			})
@@ -93,56 +94,56 @@ function fifth_page() {
 		$(".company_" + e.target.classList[1]).addClass("flipInY animated")
 	})
 }
-
-var menu_html = "<div class='menu'><div class='share' id='ss_toggle' data-rot='180'><div><i class='ion-plus-round'></i></div></div></div>"
+function bottom_nav_action(index) {
+	switch (index){
+		case 0:
+			$("#ss_menu").css("display","block");
+			$(".fa-qq").html("<a href='#'>企业简介</a>")
+			$(".fa-weibo").html("<a href='#'>董事长致辞</a>")
+			$(".fa-weixin").html("<a href='#'>企业理念</a>")
+			$(".fa-renren").html("<a href='#'>大事记</a>")
+			$(".fa-renren").parent().css("display","flex")
+			break;
+		case 1:
+			second_page();
+			$("#ss_menu").css("display","block");
+			$(".fa-qq").html("<a href='#'>产业园官网</a>")
+			$(".fa-weibo").html("<a href='#'>专业领域</a>")
+			$(".fa-weixin").html("<a href='#'>入驻团队</a>")
+			$(".fa-renren").html("")
+			$(".fa-renren").parent().css("display","none")
+			break;
+		case 2:
+			third_page();
+			$("#ss_menu").css("display","block");
+			$(".fa-qq").html("<a href='#'>企业荣誉</a>")
+			$(".fa-weibo").html("<a href='#'>业务范围</a>")
+			$(".fa-weixin").html("<a href='#'>精品工程</a>")
+			$(".fa-renren").html("")
+			$(".fa-renren").parent().css("display","none")
+			break;
+		case 3:
+			$("#ss_menu").css("display","block");
+			$(".fa-qq").html("<a href='#'>公司新闻</a>")
+			$(".fa-weibo").html("<a href='#'>设计师精品</a>")
+			$(".fa-weixin").html("<a href='#'>行业资讯</a>")
+			$(".fa-renren").html("<a href='#'>创意装饰</a>")
+			$(".fa-renren").parent().css("display","flex")
+			break;
+		case 4:
+			$("#ss_menu").css("display","none");
+			break;
+		case 5:
+			$("#ss_menu").css("display","none");
+			break;
+	}
+}
 function slider (callback) {
 	var mySwiper = new Swiper ('.swiper-container', {
     	direction: 'vertical',
 		on: {
 		    transitionEnd: function(swiper){
-		    	console.log(this.activeIndex)
-		  		switch (this.activeIndex){
-		  			case 0:
-		  				$("#ss_menu").css("display","block");
-						$(".fa-qq").html("<a href='#'>企业简介</a>")
-						$(".fa-weibo").html("<a href='#'>董事长致辞</a>")
-						$(".fa-weixin").html("<a href='#'>企业理念</a>")
-						$(".fa-renren").html("<a href='#'>大事记</a>")
-						$(".fa-renren").parent().css("display","flex")
-		  				break;
-					case 1:
-						second_page();
-						$("#ss_menu").css("display","block");
-						$(".fa-qq").html("<a href='#'>产业园官网</a>")
-						$(".fa-weibo").html("<a href='#'>专业领域</a>")
-						$(".fa-weixin").html("<a href='#'>入驻团队</a>")
-						$(".fa-renren").html("")
-						$(".fa-renren").parent().css("display","none")
-						break;
-					case 2:
-						third_page();
-						$("#ss_menu").css("display","block");
-						$(".fa-qq").html("<a href='#'>企业荣誉</a>")
-						$(".fa-weibo").html("<a href='#'>业务范围</a>")
-						$(".fa-weixin").html("<a href='#'>精品工程</a>")
-						$(".fa-renren").html("")
-						$(".fa-renren").parent().css("display","none")
-						break;
-					case 3:
-						$("#ss_menu").css("display","block");
-						$(".fa-qq").html("<a href='#'>公司新闻</a>")
-						$(".fa-weibo").html("<a href='#'>设计师精品</a>")
-						$(".fa-weixin").html("<a href='#'>行业资讯</a>")
-						$(".fa-renren").html("<a href='#'>创意装饰</a>")
-						$(".fa-renren").parent().css("display","flex")
-						break;
-					case 4:
-						$("#ss_menu").css("display","none");
-						break;
-					case 4:
-						$("#ss_menu").css("display","none");
-						break;
-				}
+				bottom_nav_action(this.activeIndex)
 		    }
 		}
   	});
