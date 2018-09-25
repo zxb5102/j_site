@@ -604,6 +604,12 @@
     font-family: video-top-font;
     src: url('../font/video-top-font.ttf');
 }
+.video-font{
+    font-family: video-top-font;
+}
+.video-font-size{
+    font-size: 60px !important;
+}
 
 .video-top-font {
     font-family: video-top-font;
@@ -612,15 +618,15 @@
 
 .video-top-text {
     position: absolute;
-    height: 200px;
-    top: 50%;
+    /* height: 200px; */
+    top: 30%;
     width: 100%;
     transform: translateY(-50%);
     justify-content: center;
     align-items: center;
     font-size: 40px;
     line-height: 70px;
-    z-index: 200;
+    z-index: 50;
     color: white;
     transition: 4s;
     text-shadow: 2px 2px 5px black;
@@ -661,7 +667,7 @@
     width: 100%;
     top: 0px;
     left: 0px;
-    z-index: 211;
+    z-index: 10;
     opacity: 0;
     transition: 4s;
     /* background-image: url(../img/video-bg.png); */
@@ -676,14 +682,13 @@
     position: absolute;
     bottom: 0px;
     left: 0px;
-    height: 40%;
+    top: 0px;
+    height: 100%;
     width: 100%;
-    background-image: url(../img/video-bg-arc01.png);
-    /* background-image: url(../img/test02s.jpg); */
-    /* background-color: #b7b7b7; */
+    background-image: url(../img/jsv-video-bg.jpg);
     background-position: center;
-    background-size: contain;
-    background-repeat-y: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .vidoe-bg-font {

@@ -187,15 +187,15 @@ $(document).ready(function () {
 	var myVideo = document.getElementById('video');
 	myVideo.muted = true;
 	myVideo.addEventListener("canplay", function () {
-		setTimeout(function () {
-			$('.video-top-text').addClass('video-top-text-an-z');;
-		}, 4000);
+		// setTimeout(function () {
+			// $('.video-top-text').addClass('video-top-text-an-z');;
+		// }, 4000);
 		setTimeout(function () {
 			$('.video-end-hold').addClass('video-end-hold-in');;
-		}, 7000);
-		setTimeout(function () {
-			$('.video-txt-left').addClass('video-txt-show');
-		}, 1000);
+		}, 12000);
+		// setTimeout(function () {
+		// 	$('.video-txt-left').addClass('video-txt-show');
+		// }, 1000);
 
 		$(document).keyup(function (event) {
 			if (event.keyCode == 38) {
